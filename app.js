@@ -9,12 +9,13 @@ $.ajaxSetup({
 });
 
 $.ajax({
-    url: baseUrl,
+    url: baseUrl + '/board',
     method: 'GET',
     success: function (response) {
         setupColumns(response.columns);
     }
 });
+
 
 function setupCards(col, cards) {
     cards.forEach(function (card) {
